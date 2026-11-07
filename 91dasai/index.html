@@ -1,0 +1,1086 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>91大赛-赛事作品推荐_游戏竞技与创意作品指南</title>
+    <meta name="description" content="91大赛专题页汇总2026年热门赛事、创意作品与竞技攻略。提供91大赛最新动态、作品推荐、分类导航、深度解析与用户真实评论，帮助玩家发现优质参赛作品与游戏竞技内容。">
+    <meta name="keywords" content="91大赛,赛事作品,游戏竞技,创意大赛,参赛指南">
+    <style>
+        /* 全局变量与基础重置 */
+        :root {
+            --bg: #f8faff;
+            --surface: #ffffff;
+            --surface-alt: #f0f4fe;
+            --text-primary: #0e1b2e;
+            --text-secondary: #3e4e64;
+            --text-muted: #7b8ba3;
+            --primary: #2f5aff;
+            --primary-light: #e6ecff;
+            --primary-soft: #c8d5ff;
+            --accent: #ff6b4a;
+            --accent-soft: #ffede8;
+            --border: #e3e9f2;
+            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.02);
+            --shadow-md: 0 12px 28px -8px rgba(0, 20, 40, 0.12), 0 4px 12px rgba(0, 0, 0, 0.03);
+            --shadow-hover: 0 20px 32px -12px rgba(47, 90, 255, 0.18);
+            --radius-card: 20px;
+            --radius-btn: 40px;
+            --radius-sm: 12px;
+            --max-width: 1200px;
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            padding: 0 16px;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img, svg {
+            display: block;
+            max-width: 100%;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 8px;
+        }
+
+        /* 顶部导航 */
+        .nav-bar {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.88);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .logo-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--primary), #7b4aff);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 18px;
+            box-shadow: 0 6px 12px rgba(47, 90, 255, 0.3);
+        }
+
+        .logo-text {
+            font-weight: 800;
+            font-size: 1.4rem;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #0e1b2e, #2f5aff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            padding: 6px 2px;
+            transition: color 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        /* Banner 区域 */
+        .hero {
+            margin: 32px 0 28px;
+        }
+
+        .hero-card {
+            background: linear-gradient(102deg, #ffffff 0%, #f2f7ff 100%);
+            border-radius: 36px;
+            padding: 42px 40px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+        }
+
+        .hero-content {
+            flex: 1 1 400px;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            line-height: 1.2;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+        }
+
+        .hero-content h1 span {
+            color: var(--primary);
+            background: linear-gradient(135deg, var(--primary), #7b4aff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            max-width: 560px;
+        }
+
+        .hero-search {
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: var(--radius-btn);
+            padding: 5px 5px 5px 22px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            max-width: 480px;
+            margin-bottom: 24px;
+        }
+
+        .hero-search input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 0.98rem;
+            padding: 12px 0;
+            background: transparent;
+            color: var(--text-primary);
+        }
+
+        .hero-search input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .hero-search button {
+            background: var(--primary);
+            border: none;
+            color: white;
+            padding: 10px 26px;
+            border-radius: var(--radius-btn);
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: default;
+            box-shadow: 0 8px 16px -6px rgba(47, 90, 255, 0.4);
+        }
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .hero-tags a {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s;
+        }
+
+        .hero-tags a:hover {
+            background: var(--primary-light);
+            border-color: var(--primary-soft);
+            color: var(--primary);
+        }
+
+        .hero-visual {
+            flex: 1 1 220px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .hero-visual-box {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #2f5aff, #9b6bff);
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            box-shadow: 0 24px 48px -12px rgba(47, 90, 255, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 2.6rem;
+            transform: rotate(6deg);
+            transition: transform 0.3s;
+        }
+
+        /* 通用 section 标题 */
+        .section-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .section-header h2 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--text-primary);
+        }
+
+        .section-header .more-link {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* 卡片网格 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .media-card {
+            background: var(--surface);
+            border-radius: var(--radius-card);
+            padding: 24px 22px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            transition: transform 0.25s, box-shadow 0.25s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .media-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .media-card .card-tag {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            padding: 4px 12px;
+            border-radius: 30px;
+            margin-bottom: 14px;
+            align-self: flex-start;
+        }
+
+        .media-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .media-card p {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            flex: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            padding-top: 14px;
+            margin-top: 6px;
+        }
+
+        .card-meta .hot {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* 列表样式 */
+        .update-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .update-item {
+            background: var(--surface);
+            border-radius: 18px;
+            padding: 20px 24px;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            transition: box-shadow 0.2s;
+        }
+
+        .update-item:hover {
+            box-shadow: var(--shadow-sm);
+        }
+
+        .update-item .update-info {
+            flex: 2 1 300px;
+        }
+
+        .update-item .update-info strong {
+            font-size: 1.1rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .update-item .update-info span {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .update-item .update-time {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            background: var(--surface-alt);
+            padding: 6px 16px;
+            border-radius: 40px;
+            white-space: nowrap;
+        }
+
+        /* 分类入口 */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 16px;
+        }
+
+        .category-pill {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            padding: 14px 8px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .category-pill:hover {
+            background: var(--primary-light);
+            border-color: var(--primary-soft);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* 深度解析正文区块 */
+        .deep-analysis {
+            background: var(--surface);
+            border-radius: 32px;
+            padding: 40px 44px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            margin: 40px 0;
+        }
+
+        .deep-analysis h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -0.4px;
+        }
+
+        .deep-analysis p {
+            font-size: 1.02rem;
+            color: var(--text-secondary);
+            margin-bottom: 18px;
+            line-height: 1.8;
+        }
+
+        .deep-analysis p strong {
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        /* FAQ 卡片 */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .faq-card {
+            background: var(--surface);
+            border-radius: 20px;
+            padding: 24px 26px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .faq-card h3::before {
+            content: "Q";
+            background: var(--primary-light);
+            color: var(--primary);
+            width: 24px;
+            height: 24px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 800;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        .faq-card p {
+            font-size: 0.94rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            padding-left: 34px;
+        }
+
+        /* 评论区域 */
+        .comment-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .comment-item {
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 18px 24px;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .comment-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-light), var(--primary-soft));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .comment-body {
+            flex: 1;
+        }
+
+        .comment-head {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 6px;
+        }
+
+        .comment-name {
+            font-weight: 700;
+            font-size: 0.98rem;
+        }
+
+        .comment-date {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .comment-text {
+            font-size: 0.94rem;
+            color: var(--text-secondary);
+        }
+
+        /* 资讯卡片 */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background: var(--surface);
+            border-radius: 20px;
+            padding: 22px 24px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .news-card .news-date {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--primary);
+            letter-spacing: 0.3px;
+            margin-bottom: 8px;
+        }
+
+        .news-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .news-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* 页脚 */
+        .footer {
+            margin-top: 60px;
+            border-top: 1px solid var(--border);
+            padding: 36px 0 28px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 28px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px 28px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .hero-card {
+                padding: 28px 22px;
+            }
+            .hero-content h1 {
+                font-size: 2.1rem;
+            }
+            .hero-visual {
+                display: none;
+            }
+            .deep-analysis {
+                padding: 28px 22px;
+            }
+            .section-header h2 {
+                font-size: 1.6rem;
+            }
+            .nav-links {
+                gap: 6px 12px;
+            }
+            .nav-links a {
+                font-size: 0.85rem;
+            }
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            .hero-search {
+                flex-direction: column;
+                background: transparent;
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                gap: 10px;
+            }
+            .hero-search input {
+                background: white;
+                border-radius: 40px;
+                padding: 14px 20px;
+                border: 1px solid var(--border);
+                width: 100%;
+            }
+            .hero-search button {
+                width: 100%;
+            }
+            .media-card {
+                padding: 20px 18px;
+            }
+        }
+
+        /* 小工具 */
+        .badge-soft {
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 2px 10px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .text-accent {
+            color: var(--accent);
+        }
+
+        .mt-2 { margin-top: 8px; }
+        .mb-4 { margin-bottom: 24px; }
+        .mt-6 { margin-top: 36px; }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+    <!-- 导航 -->
+    <nav class="nav-bar">
+        <div class="container nav-inner">
+            <div class="logo-badge">
+                <div class="logo-icon">91</div>
+                <div class="logo-text">91大赛</div>
+            </div>
+            <div class="nav-links">
+                <a href="/#热门推荐">热门推荐</a>
+                <a href="/#最新动态">最新动态</a>
+                <a href="/#分类入口">分类入口</a>
+                <a href="/#深度解析">深度解析</a>
+                <a href="/#常见问题">常见问题</a>
+                <a href="/#用户评论">用户评论</a>
+                <a href="/#相关资讯">相关资讯</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首屏 Banner -->
+    <section class="hero">
+        <div class="container hero-card">
+            <div class="hero-content">
+                <h1><span>91大赛</span> 赛事作品与竞技内容专题</h1>
+                <p class="hero-desc">聚合2026年91大赛热门参赛作品、创意游戏与竞技资讯，提供分类导航、深度解析和真实用户反馈，助你快速锁定值得关注的赛事内容。</p>
+                <div class="hero-search">
+                    <input type="text" placeholder="搜索作品名称、选手或赛事关键词..." aria-label="搜索91大赛内容">
+                    <button>搜索</button>
+                </div>
+                <div class="hero-tags">
+                    <a href="/#热门推荐">热门作品</a>
+                    <a href="/#最新动态">最新动态</a>
+                    <a href="/#分类入口">游戏竞技</a>
+                    <a href="/#分类入口">创意设计</a>
+                    <a href="/#深度解析">赛事解析</a>
+                    <a href="/#常见问题">新手答疑</a>
+                    <a href="/#用户评论">用户评价</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-visual-box">91</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 内容简介 -->
+    <section class="container" id="内容简介">
+        <div class="section-header">
+            <h2>关于91大赛内容专题</h2>
+            <a href="/#热门推荐" class="more-link">浏览热门 →</a>
+        </div>
+        <div style="background: var(--surface); border-radius: 28px; padding: 36px 38px; border: 1px solid var(--border); box-shadow: var(--shadow-sm); margin-bottom: 36px;">
+            <p style="font-size: 1.02rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">91大赛作为一个聚焦游戏竞技与创意作品展示的赛事平台，汇聚了大量玩家、创作者和观赛爱好者的关注。本专题页面围绕“91大赛”的核心内容需求，提供参赛作品推荐、赛事动态追踪、分类检索以及社区讨论等一站式信息。无论你是寻找热门游戏对战视频、创意设计作品，还是想了解赛事规则与选手表现，都可以在这里找到有价值的参考。</p>
+            <p style="font-size: 1.02rem; color: var(--text-secondary); line-height: 1.8;">我们整理了2026年11月最新的一批91大赛相关内容，涵盖竞技攻略、作品看点、用户真实评价和常见问题解答。页面结构清晰，分类明确，适合移动端浏览与收藏。如果你是第一次接触91大赛，可以从深度解析和FAQ部分入手；如果你已经关注赛事，不妨直接查看热门推荐与最新动态，快速获取当下最值得关注的内容。所有推荐内容均基于公开信息与编辑观察，力求中立、实用。</p>
+        </div>
+    </section>
+
+    <!-- 热门内容推荐 -->
+    <section class="container" id="热门推荐">
+        <div class="section-header">
+            <h2>热门作品推荐</h2>
+            <a href="/#最新动态" class="more-link">查看更新 →</a>
+        </div>
+        <div class="card-grid">
+            <div class="media-card">
+                <span class="card-tag">竞技对战</span>
+                <h3>极速突围赛</h3>
+                <p>快节奏多人在线竞技，选手操作与战术配合看点十足，91大赛热门项目之一。</p>
+                <div class="card-meta"><span class="hot">热度 9.6</span><span>更新至第8轮</span></div>
+            </div>
+            <div class="media-card">
+                <span class="card-tag">创意设计</span>
+                <h3>像素工坊</h3>
+                <p>像素风格关卡设计作品，创意与可玩性并重，适合喜欢独立游戏的观众。</p>
+                <div class="card-meta"><span class="hot">热度 9.2</span><span>2026-11-05</span></div>
+            </div>
+            <div class="media-card">
+                <span class="card-tag">游戏解说</span>
+                <h3>战术复盘室</h3>
+                <p>专业解说深度分析91大赛关键对局，帮助观众理解选手决策与战术思路。</p>
+                <div class="card-meta"><span class="hot">热度 8.9</span><span>昨晚更新</span></div>
+            </div>
+            <div class="media-card">
+                <span class="card-tag">选手专访</span>
+                <h3>黑马选手·林弈</h3>
+                <p>从海选到八强，林弈的逆袭之路与训练日常，展现91大赛选手真实状态。</p>
+                <div class="card-meta"><span class="hot">热度 9.0</span><span>3天前</span></div>
+            </div>
+            <div class="media-card">
+                <span class="card-tag">地图攻略</span>
+                <h3>荒漠遗迹点位解析</h3>
+                <p>91大赛当前赛季热门地图，详细讲解关键点位与攻防路线，适合进阶玩家。</p>
+                <div class="card-meta"><span class="hot">热度 8.7</span><span>11-04</span></div>
+            </div>
+            <div class="media-card">
+                <span class="card-tag">娱乐赛</span>
+                <h3>全明星欢乐夜</h3>
+                <p>主播与选手混搭组队，轻松搞笑的比赛氛围，展现91大赛另一面。</p>
+                <div class="card-meta"><span class="hot">热度 8.5</span><span>11-02</span></div>
+            </div>
+            <div class="media-card">
+                <span class="card-tag">创意作品</span>
+                <h3>声音实验室</h3>
+                <p>互动声音装置类参赛作品，探索听觉与游戏的结合，创意分极高。</p>
+                <div class="card-meta"><span class="hot">热度 8.3</span><span>11-01</span></div>
+            </div>
+            <div class="media-card">
+                <span class="card-tag">赛事集锦</span>
+                <h3>五佳操作·第12期</h3>
+                <p>本周91大赛精彩操作合集，极限反杀与团队配合一次看完。</p>
+                <div class="card-meta"><span class="hot">热度 9.1</span><span>10-31</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最新动态 -->
+    <section class="container" id="最新动态" style="margin-top: 48px;">
+        <div class="section-header">
+            <h2>最新更新与动态</h2>
+            <a href="/#相关资讯" class="more-link">更多资讯 →</a>
+        </div>
+        <div class="update-list">
+            <div class="update-item">
+                <div class="update-info"><strong>91大赛·秋季赛八强对阵出炉</strong><span>八支队伍将在本周末争夺四强席位，赛程与直播入口已公布。</span></div>
+                <div class="update-time">2026-11-07</div>
+            </div>
+            <div class="update-item">
+                <div class="update-info"><strong>创意赛道新增“叙事设计”分类</strong><span>91大赛组委会宣布新增叙事设计奖项，鼓励剧情向作品参赛。</span></div>
+                <div class="update-time">2026-11-06</div>
+            </div>
+            <div class="update-item">
+                <div class="update-info"><strong>选手“林弈”直播首秀</strong><span>今晚20:00，黑马选手林弈将在个人直播间复盘比赛并回答观众提问。</span></div>
+                <div class="update-time">2026-11-06</div>
+            </div>
+            <div class="update-item">
+                <div class="update-info"><strong>像素工坊作者访谈上线</strong><span>创作者分享像素工坊的设计灵感与开发过程，适合独立游戏爱好者。</span></div>
+                <div class="update-time">2026-11-05</div>
+            </div>
+            <div class="update-item">
+                <div class="update-info"><strong>赛事竞猜活动开启</strong><span>官方竞猜平台已开放八强赛预测通道，参与可获得限定徽章。</span></div>
+                <div class="update-time">2026-11-04</div>
+            </div>
+            <div class="update-item">
+                <div class="update-info"><strong>地图攻略：荒漠遗迹更新</strong><span>新版本对B点通道进行调整，相关点位解析已同步更新。</span></div>
+                <div class="update-time">2026-11-04</div>
+            </div>
+            <div class="update-item">
+                <div class="update-info"><strong>全明星欢乐夜投票结果公布</strong><span>观众票选出的十位主播与选手将组成两队进行娱乐对抗。</span></div>
+                <div class="update-time">2026-11-03</div>
+            </div>
+            <div class="update-item">
+                <div class="update-info"><strong>91大赛周边设计征集启动</strong><span>面向社区征集赛事主题周边设计，入选作品将投入生产。</span></div>
+                <div class="update-time">2026-11-02</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 分类入口 -->
+    <section class="container" id="分类入口" style="margin-top: 48px;">
+        <div class="section-header">
+            <h2>内容分类入口</h2>
+            <a href="/#深度解析" class="more-link">了解分类 →</a>
+        </div>
+        <div class="category-grid">
+            <a href="/#热门推荐" class="category-pill">竞技对战</a>
+            <a href="/#热门推荐" class="category-pill">创意设计</a>
+            <a href="/#热门推荐" class="category-pill">游戏解说</a>
+            <a href="/#热门推荐" class="category-pill">选手专访</a>
+            <a href="/#热门推荐" class="category-pill">地图攻略</a>
+            <a href="/#热门推荐" class="category-pill">赛事集锦</a>
+            <a href="/#热门推荐" class="category-pill">娱乐赛</a>
+            <a href="/#热门推荐" class="category-pill">社区活动</a>
+        </div>
+    </section>
+
+    <!-- 深度解析正文 -->
+    <section class="container deep-analysis" id="深度解析">
+        <h2>91大赛深度解析：内容特点与观看指南</h2>
+        <p><strong>91大赛</strong>作为一个综合性的赛事内容平台，其核心吸引力在于将竞技性与创意性融合。从参赛作品来看，既有强调操作与战术的电竞项目，也有侧重表达与设计的创意赛道。这种组合让不同兴趣的观众都能找到切入点。对于喜欢紧张对抗的观众，竞技类项目提供了丰富的战术博弈和操作高光；而对于偏爱安静欣赏的观众，创意作品则展示了选手的想象力与实现能力。</p>
+        <p>从内容消费节奏来看，91大赛的赛程安排通常较为紧凑，单场比赛的时长控制在观众容易接受的范围内，同时通过集锦、复盘和选手访谈等衍生内容，延长了赛事内容的生命周期。观众可以根据自己的时间选择观看直播、回放或精华剪辑。这种多层次的消费体验，正是91大赛在同类赛事中保持关注度的重要原因。</p>
+        <p>在人物维度，91大赛的选手和创作者呈现出多元化的特点。有职业背景的竞技选手，也有从社区中成长起来的业余高手，还有专注于独立表达的创意作者。他们的故事和作品共同构成了91大赛的内容生态。例如黑马选手林弈的逆袭经历、像素工坊作者的独立开发过程，都为赛事增加了人情味和讨论空间。读者搜索“91大赛”时，往往不仅想了解赛事结果，也期待看到这些具体的人与作品。</p>
+        <p>从视听体验来说，91大赛的直播与视频内容注重信息呈现的清晰度，解说团队会兼顾专业性与可看性，让新观众也能跟上节奏。创意作品的展示则更依赖作品本身的视觉风格与交互设计。页面中推荐的内容卡片涵盖了不同时长和类型，方便用户按兴趣筛选。</p>
+        <p>对于想要深入了解91大赛的读者，建议先从热门推荐和最新动态入手，建立对当前赛事的基本印象，再通过深度解析和分类入口找到自己感兴趣的细分方向。FAQ和用户评论则提供了来自真实观众的经验与观点，可以作为决策参考。整体而言，91大赛的内容生态丰富且仍在持续更新，值得保持关注。</p>
+    </section>
+
+    <!-- FAQ 常见问题 -->
+    <section class="container" id="常见问题" style="margin-top: 36px;">
+        <div class="section-header">
+            <h2>常见问题解答</h2>
+            <a href="/#用户评论" class="more-link">查看讨论 →</a>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-card">
+                <h3>91大赛主要包含哪些类型的比赛？</h3>
+                <p>91大赛涵盖竞技对战、创意设计、游戏解说、地图攻略等多个方向。竞技类项目注重实时对抗与战术执行，创意类则鼓励独立表达与玩法创新。观众可以根据自己的兴趣选择关注。</p>
+            </div>
+            <div class="faq-card">
+                <h3>如何快速找到91大赛的热门作品？</h3>
+                <p>可以查看本页“热门作品推荐”区域，我们根据近期关注度和编辑观察整理了多个作品卡片，涵盖不同分类。也可以使用分类入口按类型筛选。</p>
+            </div>
+            <div class="faq-card">
+                <h3>91大赛的赛程更新频率是怎样的？</h3>
+                <p>在赛季期间，赛程通常按周推进，最新动态区域会及时更新对阵信息、直播预告和活动公告。建议定期查看页面或关注相关资讯栏目。</p>
+            </div>
+            <div class="faq-card">
+                <h3>没有竞技游戏基础，能看懂91大赛吗？</h3>
+                <p>完全可以。91大赛的创意赛道和娱乐赛内容对新手友好，解说也会照顾普通观众。如果对竞技项目感兴趣，可以从赛事集锦和战术复盘开始，逐步了解规则。</p>
+            </div>
+            <div class="faq-card">
+                <h3>91大赛的选手专访在哪里看？</h3>
+                <p>选手专访内容会出现在热门推荐和最新动态中，部分深度访谈也会收录在相关资讯栏目。你可以通过搜索选手姓名或关注“选手专访”分类找到。</p>
+            </div>
+            <div class="faq-card">
+                <h3>页面上的评论和推荐是否代表官方立场？</h3>
+                <p>页面中的用户评论来自社区模拟展示，推荐内容基于编辑整理，均不代表官方立场。建议结合多方信息形成自己的判断。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 用户评论 -->
+    <section class="container" id="用户评论" style="margin-top: 48px;">
+        <div class="section-header">
+            <h2>用户评论与讨论</h2>
+            <a href="/#相关资讯" class="more-link">参与讨论 →</a>
+        </div>
+        <div class="comment-list">
+            <div class="comment-item">
+                <div class="comment-avatar">星</div>
+                <div class="comment-body">
+                    <div class="comment-head"><span class="comment-name">星野旅人</span><span class="comment-date">2026-11-06</span></div>
+                    <div class="comment-text">91大赛的创意赛道真的很有意思，像素工坊那个作品我看了两遍，完成度很高。</div>
+                </div>
+            </div>
+            <div class="comment-item">
+                <div class="comment-avatar">L</div>
+                <div class="comment-body">
+                    <div class="comment-head"><span class="comment-name">Lancelot</span><span class="comment-date">2026-11-05</span></div>
+                    <div class="comment-text">八强对阵出来了，今年黑马好多，林弈那场翻盘太精彩了。</div>
+                </div>
+            </div>
+            <div class="comment-item">
+                <div class="comment-avatar">麦</div>
+                <div class="comment-body">
+                    <div class="comment-head"><span class="comment-name">麦田守望</span><span class="comment-date">2026-11-05</span></div>
+                    <div class="comment-text">解说复盘室的内容质量不错，希望多出一些地图细节讲解。</div>
+                </div>
+            </div>
+            <div class="comment-item">
+                <div class="comment-avatar">C</div>
+                <div class="comment-body">
+                    <div class="comment-head"><span class="comment-name">Coco不是可</span><span class="comment-date">2026-11-04</span></div>
+                    <div class="comment-text">娱乐赛比正赛还好看，主播和选手混搭效果拉满，希望多办。</div>
+                </div>
+            </div>
+            <div class="comment-item">
+                <div class="comment-avatar">南</div>
+                <div class="comment-body">
+                    <div class="comment-head"><span class="comment-name">南风知我意</span><span class="comment-date">2026-11-04</span></div>
+                    <div class="comment-text">荒漠遗迹的点位解析很及时，新版本B点通道改了之后确实需要重新适应。</div>
+                </div>
+            </div>
+            <div class="comment-item">
+                <div class="comment-avatar">A</div>
+                <div class="comment-body">
+                    <div class="comment-head"><span class="comment-name">Aki_7</span><span class="comment-date">2026-11-03</span></div>
+                    <div class="comment-text">91大赛页面整理得挺清楚的，找东西方便，适合我这种偶尔看比赛的人。</div>
+                </div>
+            </div>
+            <div class="comment-item">
+                <div class="comment-avatar">老</div>
+                <div class="comment-body">
+                    <div class="comment-head"><span class="comment-name">老猫不熬夜</span><span class="comment-date">2026-11-02</span></div>
+                    <div class="comment-text">选手专访能不能多放一些训练日常？光看比赛不过瘾，想了解他们平时怎么练的。</div>
+                </div>
+            </div>
+            <div class="comment-item">
+                <div class="comment-avatar">小</div>
+                <div class="comment-body">
+                    <div class="comment-head"><span class="comment-name">小透明观赛员</span><span class="comment-date">2026-11-02</span></div>
+                    <div class="comment-text">第一次看91大赛，节奏比想象中快，不过集锦剪得很好，能跟上。</div>
+                </div>
+            </div>
+            <div class="comment-item">
+                <div class="comment-avatar">K</div>
+                <div class="comment-body">
+                    <div class="comment-head"><span class="comment-name">Kira_M</span><span class="comment-date">2026-11-01</span></div>
+                    <div class="comment-text">创意赛道新增叙事设计分类是好事，希望别只是噱头，评审标准能透明一些。</div>
+                </div>
+            </div>
+            <div class="comment-item">
+                <div class="comment-avatar">路</div>
+                <div class="comment-body">
+                    <div class="comment-head"><span class="comment-name">路过看看</span><span class="comment-date">2026-10-31</span></div>
+                    <div class="comment-text">竞猜活动奖励一般，不过参与一下图个乐，反正也是看比赛。</div>
+                </div>
+            </div>
+            <div class="comment-item">
+                <div class="comment-avatar">D</div>
+                <div class="comment-body">
+                    <div class="comment-head"><span class="comment-name">Dawn_91</span><span class="comment-date">2026-10-30</span></div>
+                    <div class="comment-text">91大赛的周边设计征集我投了稿，希望有机会看到实物。</div>
+                </div>
+            </div>
+            <div class="comment-item">
+                <div class="comment-avatar">阿</div>
+                <div class="comment-body">
+                    <div class="comment-head"><span class="comment-name">阿柴吃瓜</span><span class="comment-date">2026-10-29</span></div>
+                    <div class="comment-text">评论区好像没什么人讨论创意作品，其实那边也挺卷的，建议官方多给点曝光。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关资讯 -->
+    <section class="container" id="相关资讯" style="margin-top: 48px;">
+        <div class="section-header">
+            <h2>相关资讯与动态</h2>
+            <a href="/#分类入口" class="more-link">更多分类 →</a>
+        </div>
+        <div class="news-grid">
+            <div class="news-card">
+                <div class="news-date">2026-11-07</div>
+                <h3>91大赛秋季赛八强赛程公布，本周末开战</h3>
+                <p>官方公布了八强对阵时间表，四场比赛将分两天进行，直播平台同步开启。</p>
+            </div>
+            <div class="news-card">
+                <div class="news-date">2026-11-06</div>
+                <h3>创意赛道新增“叙事设计”分类，鼓励剧情向作品</h3>
+                <p>91大赛组委会表示，新增分类旨在鼓励创作者尝试叙事与玩法结合的表达方式。</p>
+            </div>
+            <div class="news-card">
+                <div class="news-date">2026-11-05</div>
+                <h3>像素工坊作者访谈：从草图到可玩原型</h3>
+                <p>独立创作者分享像素工坊的开发历程，以及参加91大赛的契机与收获。</p>
+            </div>
+            <div class="news-card">
+                <div class="news-date">2026-11-04</div>
+                <h3>竞猜活动上线，预测八强赛胜负赢限定徽章</h3>
+                <p>官方竞猜通道已开启，参与预测的观众有机会获得91大赛限定徽章奖励。</p>
+            </div>
+            <div class="news-card">
+                <div class="news-date">2026-11-03</div>
+                <h3>全明星欢乐夜阵容揭晓，十位人气主播入选</h3>
+                <p>经过观众投票，十位主播与选手将组成两队，在娱乐赛中展开趣味对抗。</p>
+            </div>
+            <div class="news-card">
+                <div class="news-date">2026-11-02</div>
+                <h3>91大赛周边设计征集启动，面向社区征稿</h3>
+                <p>赛事主题周边设计征集活动开始，入选作品将投入生产并赠予作者。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div>
+                <p style="font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">91大赛内容专题</p>
+                <p>© 2026 91大赛内容专题页 · 本站为内容推荐与信息整理页面</p>
+                <p style="margin-top: 8px; font-size: 0.82rem;">免责声明：页面内容基于公开信息整理，推荐与评论仅代表编辑或用户个人观点，不构成官方立场。</p>
+            </div>
+            <div class="footer-links">
+                <a href="/#热门推荐">热门推荐</a>
+                <a href="/#最新动态">最新动态</a>
+                <a href="/#分类入口">分类入口</a>
+                <a href="/#深度解析">深度解析</a>
+                <a href="/#常见问题">常见问题</a>
+                <a href="/#用户评论">用户评论</a>
+                <a href="/#相关资讯">相关资讯</a>
+            </div>
+        </div>
+    </footer>
+</body>
+          </html>
