@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日大赛推特-推特每日大赛热门榜单与参赛作品解析_每日大赛推特最新赛况_参赛指南</title>
+<meta name="description" content="每日大赛推特专题页，聚合推特每日大赛最新赛况、热门参赛作品榜单、参赛规则解读与获奖趋势分析，覆盖摄影、绘画、创意短视频等赛道，帮助创作者快速了解每日大赛推特的玩法、评审偏好与上榜技巧。">
+<meta name="keywords" content="每日大赛推特,推特每日大赛,每日大赛榜单,推特大赛参赛指南,每日大赛获奖作品">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101828'/%3E%3Cpath d='M18 44 L28 22 L38 40 L46 26' stroke='%234dd0e1' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0e1420;
+  --bg-soft:#141c2b;
+  --panel:#182133;
+  --panel-2:#1e2941;
+  --line:#27334a;
+  --txt:#e8eef8;
+  --txt-2:#a7b6cd;
+  --txt-3:#7487a3;
+  --acc:#4dd0e1;
+  --acc-2:#7c8cf8;
+  --warm:#f0b64c;
+  --radius:14px;
+  --shadow:0 8px 26px rgba(0,0,0,.35);
+  --maxw:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--txt);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  line-height:1.75;
+  font-size:15px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 18px}
+section{scroll-margin-top:76px}
+h1,h2,h3,h4{line-height:1.35;font-weight:700}
+h2{font-size:23px;margin-bottom:6px}
+h3{font-size:17px}
+p{color:var(--txt-2)}
+
+/* 顶部导航 */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(14,20,32,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  display:flex;align-items:center;gap:22px;
+  height:62px;
+}
+.logo{
+  display:flex;align-items:center;gap:9px;
+  font-weight:800;font-size:17px;letter-spacing:.5px;
+  color:var(--txt);white-space:nowrap;
+}
+.logo-mark{
+  width:30px;height:30px;border-radius:9px;
+  background:linear-gradient(135deg,var(--acc),var(--acc-2));
+  display:grid;place-items:center;
+  font-size:14px;color:#0b1220;font-weight:900;
+}
+.nav-links{display:flex;gap:16px;font-size:14px;color:var(--txt-2);flex-wrap:wrap}
+.nav-links a{padding:4px 2px;border-bottom:1px solid transparent;transition:.2s}
+.nav-links a:hover{color:var(--acc);border-color:var(--acc)}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:10px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:8px 16px;border-radius:10px;font-size:13.5px;font-weight:600;
+  transition:.22s;border:1px solid transparent;cursor:pointer;
+}
+.btn-main{background:linear-gradient(135deg,var(--acc),var(--acc-2));color:#0b1220}
+.btn-main:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(77,208,225,.28)}
+.btn-ghost{border-color:var(--line);color:var(--txt-2)}
+.btn-ghost:hover{color:var(--acc);border-color:var(--acc)}
+
+/* Banner */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 340px at 12% -10%,rgba(124,140,248,.28),transparent 62%),
+    radial-gradient(760px 320px at 88% 0%,rgba(77,208,225,.20),transparent 60%),
+    var(--bg-soft);
+  border-bottom:1px solid var(--line);
+  padding:52px 0 44px;
+}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:38px;align-items:center}
+.hero h1{font-size:36px;letter-spacing:.5px;margin-bottom:14px}
+.hero h1 em{
+  font-style:normal;
+  background:linear-gradient(120deg,var(--acc),var(--acc-2));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-lead p{font-size:15px;color:var(--txt-2);margin-bottom:8px}
+.hero-search{
+  margin-top:20px;display:flex;gap:10px;background:var(--panel);
+  border:1px solid var(--line);border-radius:12px;padding:7px;max-width:460px;
+}
+.hero-search input{
+  flex:1;background:transparent;border:0;outline:none;color:var(--txt);
+  font-size:14px;padding:0 10px;
+}
+.hero-search input::placeholder{color:var(--txt-3)}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.hero-tags a{
+  font-size:13px;padding:6px 13px;border-radius:999px;
+  border:1px solid var(--line);color:var(--txt-2);background:rgba(255,255,255,.02);
+  transition:.2s;
+}
+.hero-tags a:hover{color:var(--acc);border-color:var(--acc);background:rgba(77,208,225,.08)}
+.hero-side{display:grid;gap:12px}
+.side-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 18px;transition:.22s;
+}
+.side-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:rgba(77,208,225,.35)}
+.side-card .k{font-size:12px;color:var(--txt-3);letter-spacing:1px}
+.side-card .v{font-size:16px;font-weight:700;margin-top:4px}
+.side-card .v span{color:var(--acc)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+
+/* 通用区块 */
+.block{padding:52px 0;border-bottom:1px solid var(--line)}
+.block:last-of-type{border-bottom:0}
+.block-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:26px;flex-wrap:wrap}
+.block-head .sub{font-size:13px;color:var(--txt-3);margin-top:4px}
+.block-head .more{font-size:13px;color:var(--acc);white-space:nowrap}
+
+/* 简介 */
+.intro-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:30px}
+.intro-text p{margin-bottom:14px}
+.intro-aside{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px;height:fit-content;
+}
+.intro-aside h3{font-size:15px;margin-bottom:12px;color:var(--acc)}
+.intro-aside ul{list-style:none;display:grid;gap:10px}
+.intro-aside li{font-size:13.5px;color:var(--txt-2);padding-left:16px;position:relative}
+.intro-aside li::before{
+  content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:2px;
+  background:linear-gradient(135deg,var(--acc),var(--acc-2));
+}
+
+/* 推荐卡片 */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;transition:.24s;display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:rgba(124,140,248,.4)}
+.card-cover{
+  height:104px;position:relative;
+  display:flex;align-items:flex-end;padding:12px 14px;
+}
+.card-cover .tag-top{
+  position:absolute;top:10px;left:12px;font-size:11px;padding:3px 9px;border-radius:999px;
+  background:rgba(11,18,32,.62);border:1px solid rgba(255,255,255,.16);color:#e8eef8;
+}
+.card-body{padding:14px 15px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card-body h3{font-size:15.5px}
+.card-body .desc{font-size:13px;color:var(--txt-2);line-height:1.7}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{
+  font-size:11.5px;padding:2px 8px;border-radius:6px;
+  background:rgba(77,208,225,.1);color:var(--acc);border:1px solid rgba(77,208,225,.2);
+}
+.card-meta{
+  margin-top:auto;display:flex;justify-content:space-between;align-items:center;
+  font-size:12px;color:var(--txt-3);padding-top:8px;border-top:1px dashed var(--line);
+}
+.heat{color:var(--warm);font-weight:700}
+
+/* 更新列表 */
+.updates{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.upd{
+  display:flex;gap:14px;align-items:flex-start;
+  background:var(--bg-soft);border:1px solid var(--line);border-radius:12px;
+  padding:13px 16px;transition:.2s;
+}
+.upd:hover{border-color:rgba(77,208,225,.35);transform:translateX(3px)}
+.upd .time{
+  flex:0 0 74px;font-size:12px;color:var(--txt-3);
+  border-right:1px solid var(--line);padding-right:12px;line-height:1.5;
+}
+.upd .txt strong{display:block;font-size:14px;margin-bottom:2px}
+.upd .txt span{font-size:12.5px;color:var(--txt-2)}
+
+/* 分类 */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cat{
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:16px;transition:.22s;
+}
+.cat:hover{border-color:var(--acc);transform:translateY(-3px);box-shadow:var(--shadow)}
+.cat h4{font-size:14.5px;margin-bottom:4px}
+.cat p{font-size:12.5px;color:var(--txt-3)}
+
+/* 正文解析 */
+.article{max-width:900px}
+.article h2{margin-bottom:18px}
+.article h3{font-size:16.5px;margin:26px 0 10px;color:var(--acc)}
+.article p{margin-bottom:14px;font-size:14.5px;line-height:1.9}
+.article blockquote{
+  border-left:3px solid var(--acc);background:rgba(77,208,225,.06);
+  padding:12px 18px;border-radius:0 10px 10px 0;margin:18px 0;
+  font-size:14px;color:var(--txt-2);
+}
+
+/* 指南 */
+.guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.guide{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px;transition:.22s;
+}
+.guide:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.guide .num{
+  width:32px;height:32px;border-radius:9px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--acc),var(--acc-2));color:#0b1220;
+  font-weight:800;font-size:14px;margin-bottom:12px;
+}
+.guide h4{font-size:15px;margin-bottom:6px}
+.guide p{font-size:13px;color:var(--txt-2)}
+
+/* FAQ */
+.faq{display:grid;gap:12px;max-width:960px}
+.faq details{
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:0 18px;transition:.2s;
+}
+.faq details[open]{border-color:rgba(77,208,225,.4);background:var(--panel-2)}
+.faq summary{
+  cursor:pointer;list-style:none;padding:15px 0;font-size:14.5px;font-weight:600;
+  display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"＋";color:var(--acc);font-size:15px}
+.faq details[open] summary::after{content:"－"}
+.faq .ans{padding:0 0 16px;font-size:13.5px;color:var(--txt-2);line-height:1.8}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.cmt{
+  background:var(--bg-soft);border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px;
+}
+.cmt-head{display:flex;align-items:center;gap:9px;margin-bottom:7px}
+.avatar{
+  width:26px;height:26px;border-radius:50%;display:grid;place-items:center;
+  font-size:12px;font-weight:700;color:#0b1220;
+  background:linear-gradient(135deg,var(--acc),var(--acc-2));
+}
+.cmt-head .name{font-size:13px;font-weight:600}
+.cmt-head .date{margin-left:auto;font-size:11.5px;color:var(--txt-3)}
+.cmt p{font-size:13px;color:var(--txt-2);line-height:1.75}
+
+/* 资讯 */
+.news{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.news-item{
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:18px;transition:.22s;display:flex;flex-direction:column;gap:8px;
+}
+.news-item:hover{border-color:rgba(124,140,248,.45);transform:translateY(-3px)}
+.news-item .date{font-size:11.5px;color:var(--txt-3)}
+.news-item h4{font-size:14.5px}
+.news-item p{font-size:12.5px;color:var(--txt-2)}
+
+/* 订阅 */
+.sub-box{
+  background:linear-gradient(135deg,rgba(77,208,225,.12),rgba(124,140,248,.14));
+  border:1px solid var(--line);border-radius:16px;padding:34px;
+  display:flex;align-items:center;gap:26px;flex-wrap:wrap;
+}
+.sub-box h2{margin-bottom:6px;flex:1 1 320px}
+.sub-box p{font-size:13.5px}
+.sub-form{display:flex;gap:10px;flex:0 1 380px;min-width:260px}
+.sub-form input{
+  flex:1;background:var(--bg);border:1px solid var(--line);border-radius:10px;
+  padding:10px 14px;color:var(--txt);outline:none;font-size:13.5px;
+}
+.sub-form input:focus{border-color:var(--acc)}
+
+/* 页脚 */
+footer{background:var(--bg-soft);border-top:1px solid var(--line);padding:40px 0 26px;margin-top:10px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px;margin-bottom:26px}
+.foot-grid h5{font-size:13.5px;margin-bottom:10px;color:var(--txt)}
+.foot-grid a,.foot-grid p{font-size:12.5px;color:var(--txt-3);display:block;margin-bottom:6px}
+.foot-grid a:hover{color:var(--acc)}
+.foot-bottom{
+  border-top:1px solid var(--line);padding-top:18px;
+  font-size:12px;color:var(--txt-3);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+
+@media (max-width:980px){
+  .hero-grid,.intro-grid{grid-template-columns:1fr}
+  .cards,.news,.guide-grid{grid-template-columns:repeat(2,1fr)}
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .hero h1{font-size:29px}
+}
+@media (max-width:640px){
+  .nav-links{display:none}
+  .nav-inner{height:56px}
+  .hero{padding:34px 0 30px}
+  .hero h1{font-size:24px}
+  .cards,.news,.guide-grid,.updates,.comments{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:repeat(3,1fr);gap:8px}
+  .side-card{padding:12px}
+  .block{padding:38px 0}
+  h2{font-size:20px}
+  .foot-grid{grid-template-columns:1fr}
+  .sub-box{padding:22px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 导航 -->
+<header class="topbar">
+  <div class="wrap nav-inner">
+    <a class="logo" href="/#top">
+      <span class="logo-mark">每</span>
+      每日大赛推特
+    </a>
+    <nav class="nav-links">
+      <a href="/#hot">热门榜单</a>
+      <a href="/#updates">最新赛况</a>
+      <a href="/#cats">赛道分类</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">参赛指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#news">赛事资讯</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn-ghost" href="/#sub">订阅提醒</a>
+      <a class="btn btn-main" href="/#hot">看今日榜单</a>
+    </div>
+  </div>
+</header>
+
+<!-- 首屏 -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-lead">
+      <h1>每日大赛推特：<em>推特每日大赛</em>热门榜单与参赛作品全解析</h1>
+      <p>每天更新一轮的主题创作赛，摄影、插画、短视频、文案短打齐上阵，用一天时间交一件作品。</p>
+      <p>这里汇总每日大赛推特的当日榜单、赛道规则、评审偏好与上榜作品拆解，帮你摸清什么样的作品更容易被转发。</p>
+      <div class="hero-search">
+        <input type="text" placeholder="搜索赛道、作品标题或创作者昵称">
+        <button class="btn btn-main">搜索</button>
+      </div>
+      <div class="hero-tags">
+        <a href="/#hot">今日榜单</a>
+        <a href="/#updates">最新赛况</a>
+        <a href="/#cats">赛道分类</a>
+        <a href="/#deep">评审偏好</a>
+        <a href="/#guide">参赛流程</a>
+        <a href="/#news">赛事动态</a>
+        <a href="/#faq">新人答疑</a>
+        <a href="/#comments">网友讨论</a>
+      </div>
+    </div>
+    <div class="hero-side">
+      <div class="hero-stats">
+        <div class="side-card">
+          <div class="k">今日参赛</div>
+          <div class="v"><span>3,842</span> 件</div>
+        </div>
+        <div class="side-card">
+          <div class="k">赛道数量</div>
+          <div class="v"><span>8</span> 条</div>
+        </div>
+        <div class="side-card">
+          <div class="k">结算时间</div>
+          <div class="v">23:59</div>
+        </div>
+      </div>
+      <div class="side-card">
+        <div class="k">今日主题</div>
+        <div class="v">「一束光落下来的地方」</div>
+      </div>
+      <div class="side-card">
+        <div class="k">榜单状态</div>
+        <div class="v">已更新 · 2026-11-07 18:20</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 简介 -->
+<section class="block" id="intro">
+  <div class="wrap">
+    <div class="block-head">
+      <div>
+        <h2>每日大赛推特是什么：一天一题的内容创作擂台</h2>
+        <div class="sub">读懂机制，比盲目投稿更重要</div>
+      </div>
+      <a class="more" href="/#deep">阅读深度解析 →</a>
+    </div>
+    <div class="intro-grid">
+      <div class="intro-text">
+        <p>每日大赛推特指的是一类在推特平台上每天开赛、当天结算的主题创作活动。主办方或社区账号在固定时间放出当日题目，参赛者围绕题目提交一张图、一段短视频、一组照片或一小段文字，凭转发、点赞和编辑评审的综合表现进入当日榜单。它的节奏极快，题目当天有效，错过就要等下一轮，因此被不少创作者当成日常练手的固定项目。</p>
+        <p>关注每日大赛推特的人大致分三类：一类是想练手的新人，希望通过每天一题保持输出频率；一类是有一定粉丝基础的创作者，把上榜当作曝光入口；还有一类是纯粹的围观者，喜欢看同题异构的脑洞碰撞。无论属于哪一类，这个页面都能提供参考——当日榜单哪些作品上榜、它们赢在哪里、赛道规则有哪些细节、评审更偏爱什么样的表达，都可以在这里找到线索。</p>
+        <p>本页把每日大赛推特的公开信息做了结构化整理：热门作品卡片展示当日高热度参赛内容，最新赛况记录各赛道的开赛与结算动态，赛道分类帮助按兴趣筛选，深度解析拆解评审偏好与作品结构，参赛指南则把投稿流程和常见坑点讲清楚。对想长期参与的人来说，这些内容能减少试错成本；对只想围观的人来说，也能更快看懂榜单背后的逻辑。</p>
+        <p>需要说明的是，每日大赛推特的题目、规则和结算方式可能随主办方调整而变化，本页内容以公开可见的信息为基础进行归纳，具体以当日官方公告为准。建议把页面加入收藏，每天花几分钟扫一眼榜单和赛况，长期积累下来对题材判断和表达节奏的提升会很明显。</p>
+      </div>
+      <aside class="intro-aside">
+        <h3>这个页面适合谁看</h3>
+        <ul>
+          <li>想每天保持创作输出的新人创作者</li>
+          <li>希望借榜单获得曝光的账号运营者</li>
+          <li>研究同题创作套路的视觉与文案从业者</li>
+          <li>只想看热闹、找灵感灵感的普通围观者</li>
+          <li>需要整理赛事素材的内容编辑与搬运号</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 热门推荐 -->
+<section class="block" id="hot">
+  <div class="wrap">
+    <div class="block-head">
+      <div>
+        <h2>每日大赛推特热门作品推荐</h2>
+        <div class="sub">当日高热度参赛内容，按转发与评审综合排序</div>
+      </div>
+      <a class="more" href="/#updates">查看最新赛况 →</a>
+    </div>
+    <div class="cards">
+
+      <article class="card">
+        <div class="card-cover" style="background:linear-gradient(135deg,#1f3a5f,#4dd0e1)">
+          <span class="tag-top">摄影赛道</span>
+        </div>
+        <div class="card-body">
+          <h3>《窗台第七分钟》</h3>
+          <div class="desc">用固定机位拍下清晨光斑在旧木窗上移动的七分钟，配一句极短的说明，安静但有后劲。</div>
+          <div class="tags"><span>光影</span><span>静物</span><span>日常感</span></div>
+          <div class="card-meta"><span>转发 2.1k</span><span class="heat">热度 96</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-cover" style="background:linear-gradient(135deg,#3a2350,#7c8cf8)">
+          <span class="tag-top">插画赛道</span>
+        </div>
+        <div class="card-body">
+          <h3>《给光让路的人》</h3>
+          <div class="desc">整幅画只有一个人物剪影和一整片倾斜的光，构图留白大胆，色彩克制到几乎单色。</div>
+          <div class="tags"><span>剪影</span><span>留白</span><span>单色调</span></div>
+          <div class="card-meta"><span>转发 1.7k</span><span class="heat">热度 93</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-cover" style="background:linear-gradient(135deg,#4a2f18,#f0b64c)">
+          <span class="tag-top">短视频赛道</span>
+        </div>
+        <div class="card-body">
+          <h3>《十二秒日出》</h3>
+          <div class="desc">把一次日出压缩成十二秒延时，配乐只留环境音，结尾停在全亮的一帧，节奏干净利落。</div>
+          <div class="tags"><span>延时</span><span>环境音</span><span>短节奏</span></div>
+          <div class="card-meta"><span>转发 1.4k</span><span class="heat">热度 91</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-cover" style="background:linear-gradient(135deg,#123c3a,#4dd0e1)">
+          <span class="tag-top">文案赛道</span>
+        </div>
+        <div class="card-body">
+          <h3>《把灯关掉之后》</h3>
+          <div class="desc">三段式短文案，从关灯写到窗外路灯再写到第二天早上，全篇不到一百字，情绪递进明显。</div>
+          <div class="tags"><span>短文案</span><span>情绪流</span><span>三段式</span></div>
+          <div class="card-meta"><span>转发 1.2k</span><span class="heat">热度 89</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-cover" style="background:linear-gradient(135deg,#3a1f2e,#e07a9a)">
+          <span class="tag-top">手作赛道</span>
+        </div>
+        <div class="card-body">
+          <h3>《纸做的灯罩》</h3>
+          <div class="desc">用三张牛皮纸折出可透光的灯罩，过程图六张连发，最后一张开灯实拍成为封面。</div>
+          <div class="tags"><span>手工</span><span>过程图</span><span>实物拍摄</span></div>
+          <div class="card-meta"><span>转发 980</span><span class="heat">热度 86</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-cover" style="background:linear-gradient(135deg,#1c2b3f,#8fa8c8)">
+          <span class="tag-top">摄影赛道</span>
+        </div>
+        <div class="card-body">
+          <h3>《地铁口的反光》</h3>
+          <div class="desc">雨天积水倒影里拍下整条街的霓虹，上下对称构图，色彩浓但层次没糊，后期克制。</div>
+          <div class="tags"><span>倒影</span><span>城市夜景</span><span>对称构图</span></div>
+          <div class="card-meta"><span>转发 870</span><span class="heat">热度 84</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-cover" style="background:linear-gradient(135deg,#2c2450,#9b8cf8)">
+          <span class="tag-top">插画赛道</span>
+        </div>
+        <div class="card-body">
+          <h3>《光从画框外进来》</h3>
+          <div class="desc">把光源放在画面之外，只画出被照亮的一半物体，另一半留给观众自己补全想象。</div>
+          <div class="tags"><span>画外光</span><span>半边构图</span><span>概念向</span></div>
+          <div class="card-meta"><span>转发 760</span><span class="heat">热度 82</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-cover" style="background:linear-gradient(135deg,#3f2a12,#e0a34c)">
+          <span class="tag-top">短视频赛道</span>
+        </div>
+        <div class="card-body">
+          <h3>《楼道声控灯》</h3>
+          <div class="desc">用声控灯的亮灭做节奏点，脚步声与灯亮一一对应，三十秒讲完一个夜归的小故事。</div>
+          <div class="tags"><span>声音节奏</span><span>生活叙事</span><span>三十秒</span></div>
+          <div class="card-meta"><span>转发 690</span><span class="heat">热度 80</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-cover" style="background:linear-gradient(135deg,#123a2c,#4dc190)">
+          <span class="tag-top">文案赛道</span>
+        </div>
+        <div class="card-body">
+          <h3>《给光的一封短信》</h3>
+          <div class="desc">以书信体写成，第二人称，全篇只写三件被光照到的小事，结尾一句反问收束。</div>
+          <div class="tags"><span>书信体</span><span>第二人称</span><span>小事叙事</span></div>
+          <div class="card-meta"><span>转发 610</span><span class="heat">热度 78</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- 最新赛况 -->
+<section class="block" id="updates">
+  <div class="wrap">
+    <div class="block-head">
+      <div>
+        <h2>每日大赛推特最新赛况与更新动态</h2>
+        <div class="sub">2026 年 11 月 7 日前后赛道开赛、结算与补录信息</div>
+      </div>
+      <a class="more" href="/#news">更多赛事资讯 →</a>
+    </div>
+    <div class="updates">
+      <div class="upd"><div class="time">11-07<br>23:59</div><div class="txt"><strong>摄影赛道今日结算</strong><span>当日主题「一束光落下来的地方」投稿截止，编辑评审开始复核前五十名。</span></div></div>
+      <div class="upd"><div class="time">11-07<br>21:10</div><div class="txt"><strong>插画赛道补录开放</strong><span>因部分作品图片加载异常，主办方开放两小时补录窗口。</span></div></div>
+      <div class="upd"><div class="time">11-07<br>18:20</div><div class="txt"><strong>榜单中段更新</strong><span>短视频赛道前十名发生较大变动，两件延时作品冲入前五。</span></div></div>
+      <div class="upd"><div class="time">11-07<br>14:00</div><div class="txt"><strong>文案赛道加开短句组</strong><span>新增五十字以内极短句分组，单列评审，不占用主赛道名额。</span></div></div>
+      <div class="upd"><div class="time">11-07<br>10:30</div><div class="txt"><strong>今日题目正式公布</strong><span>八个赛道统一使用同一主题，允许跨赛道重复投稿但只计一次成绩。</span></div></div>
+      <div class="upd"><div class="time">11-06<br>22:40</div><div class="txt"><strong>昨日榜单归档</strong><span>上一轮「反方向的钟」主题共收录有效作品三千余件，已整理成归档页。</span></div></div>
+      <div class="upd"><div class="time">11-06<br>19:05</div><div class="txt"><strong>手作赛道规则微调</strong><span>过程图由三张调整为至少四张，成品图需与过程图同光源拍摄。</span></div></div>
+      <div class="upd"><div class="time">11-06<br>15:20</div><div class="txt"><strong>新人友好时段上线</strong><span>每日下午三点至五点设为新人投稿时段，评审对首次参赛账号适当加权。</span></div></div>
+      <div class="upd"><div class="time">11-05<br>20:15</div><div class="txt"><strong>短视频赛道新增时长档</strong><span>除三十秒档外新增十五秒极短档，两档分开排名互不干扰。</span></div></div>
+      <div class="upd"><div class="time">11-05<br>11:00</div><div class="txt"><strong>违规处理公告</strong><span>四件作品因使用非原创素材被取消当日资格，相关说明已在置顶帖公示。</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 分类 -->
+<section class="block" id="cats">
+  <div class="wrap">
+    <div class="block-head">
+      <div>
+        <h2>每日大赛推特赛道分类入口</h2>
+        <div class="sub">按创作形式选择赛道，不同赛道评审侧重点不同</div>
+      </div>
+      <a class="more" href="/#guide">看参赛流程 →</a>
+    </div>
+    <div class="cats">
+      <a class="cat" href="/#hot"><h4>摄影赛道</h4><p>单张或组图，重构图与光影，评审看完成度。</p></a>
+      <a class="cat" href="/#hot"><h4>插画赛道</h4><p>手绘与数字绘均可，概念清晰比笔刷精细更吃香。</p></a>
+      <a class="cat" href="/#hot"><h4>短视频赛道</h4><p>十五秒与三十秒双档，节奏和收音是硬指标。</p></a>
+      <a class="cat" href="/#hot"><h4>文案短打赛道</h4><p>百字以内，含新开的五十字极短句分组。</p></a>
+      <a class="cat" href="/#hot"><h4>手作实物赛道</h4><p>需附过程图，成品与过程同光源拍摄。</p></a>
+      <a class="cat" href="/#hot"><h4>声音与配乐赛道</h4><p>原创音频或环境采样，时长不超过一分钟。</p></a>
+      <a class="cat" href="/#hot"><h4>跨媒介混合赛道</h4><p>图文影音组合投稿，允许两种以上形式拼接。</p></a>
+      <a class="cat" href="/#hot"><h4>新人首投赛道</h4><p>首次参赛专属，评审对完成度要求相对宽松。</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- 深度解析 -->
+<section class="block" id="deep">
+  <div class="wrap">
+    <div class="block-head">
+      <div>
+        <h2>每日大赛推特深度解析：同题之下，作品凭什么上榜</h2>
+        <div class="sub">从题材、结构、节奏到评审偏好，拆开来看</div>
+      </div>
+    </div>
+    <div class="article">
+      <p>每日大赛推特最迷人也最残酷的地方在于「同题」。所有人拿到的是同一句题目，同一天截止，同一个池子里比较。这种设定把创作里那些可以靠选题规避的差异全部抹平，剩下的就是纯粹的完成度、判断力和表达效率。看多了当日榜单会发现，上榜作品往往不是技术最复杂的那个，而是在有限时间内把一件事说清楚、并且说得好看的那个。</p>
+
+      <h3>题材特点：题目短，解读空间大</h3>
+      <p>每日大赛推特的题目通常很短，一句话甚至一个词组，不设标准答案。比如「一束光落下来的地方」这种题，摄影可以拍实景，插画可以做概念，文案可以写情绪，短视频可以拍过程。题目越短，解读空间越大，参赛者之间的差异也就越明显。评审在看这类题目时，第一眼判断的往往不是技术，而是「这个解读有没有意思」。一个被很多人想到的角度，即使执行得不错，也容易被淹没；一个只有少数人想到的角度，哪怕粗糙一点，也更容易被记住。</p>
+      <p>因此，参与每日大赛推特时，选题解读往往比后期精修更值得花时间。花十分钟想三个不同方向，再挑一个最不像别人会做的，通常比直接开拍更有效。这也是为什么榜单上经常出现一些「看起来很简单」的作品——它们赢在角度，而不是工艺。</p>
+
+      <h3>内容吸引点：前几秒决定命运</h3>
+      <p>推特的信息流是快速滑动的，每日大赛推特的榜单传播也遵循同样的规律。作品的第一眼印象几乎决定了它能不能被点开、被转发。摄影和插画靠封面那一帧，短视频靠开头两秒，文案靠第一句话。很多参赛者把精力放在后半段，结果开头平淡，作品在信息流里直接滑过去，再好的结尾也没人看到。</p>
+      <p>比较稳妥的做法是把最强的信息前置：摄影把最有张力的一帧放首图，插画把最抓眼的部分放在视觉中心，短视频开头直接给动作或声音，文案第一句就抛出具体的场景而不是抽象的情绪。这些做法不新鲜，但在每日大赛推特这种当天结算的节奏里，它们直接决定了作品能不能进入评审视野。</p>
+
+      <h3>创作者表现：稳定输出比单次爆发更重要</h3>
+      <p>观察连续多轮上榜的账号会发现一个共同点：他们的作品未必每次都惊艳，但很少出现明显失手。每日大赛推特的赛制决定了单次爆发只能带来一次曝光，而稳定输出能积累固定的期待感。观众会记住「这个人每天都交东西，而且质量不飘」，这种记忆比一次高转发更值钱。</p>
+      <p>稳定输出的前提是控制复杂度。当天开赛当天交，留给制作的时间通常只有几个小时，选择自己能在一个时间段内完成的形式，比硬啃一个高风险方案更实际。很多新人第一次参赛就选了超出能力范围的形式，结果半成品交上去，反而打击信心。从简单的形式开始，把完成度做满，再逐步加难度，是更合理的路径。</p>
+
+      <h3>节奏与消费体验：短，但要完整</h3>
+      <p>每日大赛推特的参赛作品普遍偏短，这是平台属性决定的。短不等于没头没尾，恰恰相反，越短越需要结构。三十秒的短视频要有起承转合，一百字的文案要有递进，组图要有顺序感。榜单上那些高转发作品，几乎都能在很短的时间里给出一个完整的情绪闭环：开头建立期待，中段给出变化，结尾落在一个明确的点上。</p>
+      <blockquote>在同题比赛里，完整度往往比精致度更能拉开差距。一个结构清楚、执行普通的作品，通常比一个技术华丽但收尾仓促的作品更容易上榜。</blockquote>
+
+      <h3>适合人群与同类比较</h3>
+      <p>每日大赛推特适合愿意高频输出、能接受当天反馈的人。它不太适合追求长期打磨、习惯反复修改的创作者，因为赛制不给你这个时间。相比之下，一些周期更长的主题创作活动更注重作品深度，而每日大赛推特更像日常训练场：练的是判断速度、执行效率和抗压能力。</p>
+      <p>读者搜索「每日大赛推特」时，通常想了解三类信息：今天题目是什么、榜单上有什么、自己能不能参加。这个页面把这三件事拆开呈现，热门作品看结果，最新赛况看进程，参赛指南看方法。把三者对照着看，比单独刷榜单更容易看出规律。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 参赛指南 -->
+<section class="block" id="guide">
+  <div class="wrap">
+    <div class="block-head">
+      <div>
+        <h2>每日大赛推特参赛与浏览指南</h2>
+        <div class="sub">从看榜到投稿，把流程走顺</div>
+      </div>
+    </div>
+    <div class="guide-grid">
+      <div class="guide"><div class="num">1</div><h4>先看题再看榜</h4><p>每天题目公布后先自己想一个方向，再去看当日榜单，对比差异比单纯模仿更有用。</p></div>
+      <div class="guide"><div class="num">2</div><h4>选一个赛道深耕</h4><p>八个赛道同时铺开容易分散精力，先固定一个形式，把完成度做稳再考虑跨赛道。</p></div>
+      <div class="guide"><div class="num">3</div><h4>控制制作时长</h4><p>当天结算意味着时间有限，选能在数小时内收尾的方案，避免半成品投稿。</p></div>
+      <div class="guide"><div class="num">4</div><h4>把最强信息前置</h4><p>封面、开头两秒、第一句话决定作品能否被点开，优先打磨这几个位置。</p></div>
+      <div class="guide"><div class="num">5</div><h4>注意素材原创</h4><p>非原创素材会被取消资格，过程图和成品图要能对应，规则细节提前确认。</p></div>
+      <div class="guide"><div class="num">6</div><h4>收藏页面追更新</h4><p>赛况和榜单每天都在变，把页面加入收藏，固定时间扫一眼比临时找信息更省事。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="block" id="faq">
+  <div class="wrap">
+    <div class="block-head">
+      <div>
+        <h2>每日大赛推特常见问题</h2>
+        <div class="sub">新人问得最多的六个问题</div>
+      </div>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>每日大赛推特每天几点公布题目？</summary>
+        <div class="ans">通常上午公布当日题目，具体时间由主办方账号发布，不同轮次可能略有前后。题目公布后当天有效，晚上结算。建议在固定时间刷新一次主办方置顶帖或本页的最新赛况栏目，避免错过开赛信息。如果当天题目公布较晚，主办方一般会相应顺延结算时间，留意公告即可。</div>
+      </details>
+      <details>
+        <summary>第一次参加每日大赛推特，选哪个赛道比较稳妥？</summary>
+        <div class="ans">如果只想先体验流程，文案短打或摄影单张是最容易在当天完成的形式，制作周期短、修改成本低。插画和短视频对完成度要求更高，手作类需要拍摄过程图，时间压力更大。新人首投赛道对首次参赛账号相对友好，评审对完成度的要求会宽松一些，适合作为第一次尝试的入口，熟悉规则后再转到主赛道。</div>
+      </details>
+      <details>
+        <summary>同一个作品可以同时投多个赛道吗？</summary>
+        <div class="ans">规则上通常允许跨赛道投稿，但同一件作品一般只计一次成绩，不会重复上榜。跨媒介混合赛道允许两种以上形式组合，适合本来就打算做多形态表达的作品。如果打算一稿多投，建议先确认当日公告里是否有「只计一次」的说明，避免占用其他赛道名额却拿不到对应成绩。</div>
+      </details>
+      <details>
+        <summary>榜单是按转发量排的吗，编辑评审占多大比重？</summary>
+        <div class="ans">每日大赛推特的榜单通常综合转发、点赞和编辑评审，不是单纯按转发量排序。转发高的作品曝光更多，但编辑评审会在完成度、原创性和题目契合度上做二次筛选，因此偶尔会出现转发不算最高却排名靠前的作品。反过来，转发很高但偏离题目或素材存疑的作品也可能被下调，具体权重以当日规则说明为准。</div>
+      </details>
+      <details>
+        <summary>作品被取消资格一般是什么原因？</summary>
+        <div class="ans">常见原因包括使用非原创素材、过程图与成品图对不上、超出赛道规定时长或字数、以及重复提交同一作品刷榜。手作类赛道对过程图数量有明确要求，成品图需要与过程图同光源拍摄，这类细节最容易疏忽。投稿前把当日规则从头到尾看一遍，尤其是字数、时长、图片数量这几项硬性限制，可以避开大部分问题。</div>
+      </details>
+      <details>
+        <summary>想持续关注每日大赛推特，有什么省时间的办法？</summary>
+        <div class="ans">可以把本页加入收藏，每天固定时段扫一眼热门作品和最新赛况两个栏目，基本能掌握当天题目、榜单变化和规则调整。深度解析和参赛指南适合在有空的时候集中读，帮助理解评审偏好。如果只想看结果不看过程，直接看热门作品卡片即可；想长期参与的话，建议同时关注主办方账号的置顶公告，规则变动通常在那里第一时间发布。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 评论 -->
+<section class="block" id="comments">
+  <div class="wrap">
+    <div class="block-head">
+      <div>
+        <h2>每日大赛推特网友讨论</h2>
+        <div class="sub">近 30 天社区短评与长短评混合</div>
+      </div>
+    </div>
+    <div class="comments">
+      <div class="cmt"><div class="cmt-head"><span class="avatar">林</span><span class="name">林间有雾</span><span class="date">11-07</span></div><p>今天的题目一出来我就知道会有一堆光斑照，果然榜单前十里至少一半是同类构图，反而那个拍楼道声控灯的比较有意思。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">阿</span><span class="name">阿澈不熬夜</span><span class="date">11-07</span></div><p>第一次投文案赛道，写完自己读了三遍才发，结果还是被说结尾太用力。下次试试把最后一句砍掉。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">南</span><span class="name">南岸旧书</span><span class="date">11-06</span></div><p>连续跟了十天，最大的感受是别贪多。之前每天想投三个赛道，结果每个都做一半，现在固定摄影单张，反而进了两次前五十。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">K</span><span class="name">Kite_风筝</span><span class="date">11-06</span></div><p>插画赛道今天的评审口味有点偏概念，画得细的反而没上去，留白多的排前面。不知道是不是当天编辑换了。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">小</span><span class="name">小满未满</span><span class="date">11-06</span></div><p>手作赛道加过程图数量这个改动挺合理的，之前有人只发成品，根本看不出是不是自己做的。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">陈</span><span class="name">陈三皮</span><span class="date">11-05</span></div><p>短视频十五秒档真的难，时间太短了，起承转合根本塞不下，感觉更适合做纯视觉冲击的东西。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">一</span><span class="name">一只慢羊</span><span class="date">11-05</span></div><p>围观党表示每天来看榜单已经成习惯了，比刷普通信息流有意思，至少能看到同一个题不同人怎么想。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">周</span><span class="name">周末不加班</span><span class="date">11-05</span></div><p>昨天那个《地铁口的反光》确实好，倒影干净，没有为了浓烈把层次压掉，这种克制挺难得的。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">白</span><span class="name">白鹭洲</span><span class="date">11-04</span></div><p>说一下不太好的体验：有些作品封面和内容差距挺大，点进去发现就是普通照片，希望评审能多看看实际内容。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">许</span><span class="name">许多多</span><span class="date">11-04</span></div><p>新人首投赛道真的友好，我第一次参加就进了前一百，虽然名次不高但起码有信心继续了。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">木</span><span class="name">木子李不姓李</span><span class="date">11-03</span></div><p>文案极短句分组挺好的，五十字以内反而逼着人把废话删干净，比一百字那组好看多了。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">y</span><span class="name">yuki_雪</span><span class="date">11-03</span></div><p>剪辑节奏这块还是得练，看榜单上前几名的短视频，基本没有废镜头，自己剪的时候总舍不得删。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">顾</span><span class="name">顾言</span><span class="date">11-02</span></div><p>规则里说跨赛道只计一次成绩，这个确实得注意，我朋友一稿投了三个赛道，最后只算了一个。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">夏</span><span class="name">夏至未至</span><span class="date">11-02</span></div><p>不太理解为什么有些明显过曝的照片也能上榜，可能评审更看重想法吧，技术层面要求没那么严。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">何</span><span class="name">何处不相逢</span><span class="date">11-01</span></div><p>每天下午的新人时段挺贴心的，至少不用和老账号挤同一个时间窗口，希望这个机制能保留下去。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">苏</span><span class="name">苏打水加冰</span><span class="date">10-31</span></div><p>声音赛道关注的人好像不多，但昨天的环境采样作品质量挺高的，建议大家去听一下。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">赵</span><span class="name">赵四喜</span><span class="date">10-30</span></div><p>整体节奏偏快，有时候当天没空就彻底错过了，希望能有补交窗口，虽然知道可能性不大。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar">沈</span><span class="name">沈青禾</span><span class="date">10-29</span></div><p>看了半个月榜单，感觉最重要的还是题目理解，技术差距其实没想象中那么大。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 资讯 -->
+<section class="block" id="news">
+  <div class="wrap">
+    <div class="block-head">
+      <div>
+        <h2>每日大赛推特相关资讯</h2>
+        <div class="sub">赛制调整、榜单归档与创作者动态</div>
+      </div>
+      <a class="more" href="/#updates">回到最新赛况 →</a>
+    </div>
+    <div class="news">
+      <div class="news-item"><div class="date">2026-11-07</div><h4>每日大赛推特新增五十字极短句分组</h4><p>文案赛道细分出更短的分组，单列评审，鼓励用更少的字完成情绪闭环。</p></div>
+      <div class="news-item"><div class="date">2026-11-06</div><h4>手作赛道过程图要求提升至四张</h4><p>成品图需与过程图同光源拍摄，规则调整意在提高原创可核验性。</p></div>
+      <div class="news-item"><div class="date">2026-11-05</div><h4>短视频赛道拆分十五秒与三十秒双档</h4><p>两档分开排名，极短档更考验开头两秒的信息密度。</p></div>
+      <div class="news-item"><div class="date">2026-11-04</div><h4>上一轮主题榜单完成归档</h4><p>「反方向的钟」主题共收录有效作品三千余件，高转发作品已整理成合集。</p></div>
+      <div class="news-item"><div class="date">2026-11-03</div><h4>新人友好时段固定为下午三点至五点</h4><p>评审对首次参赛账号适当加权，鼓励新面孔持续参与。</p></div>
+      <div class="news-item"><div class="date">2026-11-02</div><h4>违规处理公告：四件作品取消当日资格</h4><p>涉及非原创素材使用，主办方重申素材原创与过程可核验的基本要求。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 订阅 -->
+<section class="block" id="sub">
+  <div class="wrap">
+    <div class="sub-box">
+      <div style="flex:1 1 320px">
+        <h2>订阅每日大赛推特更新提醒</h2>
+        <p>题目公布、榜单中段更新、结算归档，每天一次，不错过当天赛况。</p>
+      </div>
+      <div class="sub-form">
+        <input type="text" placeholder="留下常用邮箱或账号">
+        <button class="btn btn-main">订阅</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h5>每日大赛推特</h5>
+        <p>聚合推特每日大赛的榜单、赛况与参赛参考，帮助创作者和围观者更快看懂当天赛题。</p>
+      </div>
+      <div>
+        <h5>栏目导航</h5>
+        <a href="/#hot">热门作品</a>
+        <a href="/#updates">最新赛况</a>
+        <a href="/#cats">赛道分类</a>
+        <a href="/#deep">深度解析</a>
+      </div>
+      <div>
+        <h5>参考内容</h5>
+        <a href="/#guide">参赛指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">网友讨论</a>
+        <a href="/#news">赛事资讯</a>
+      </div>
+      <div>
+        <h5>友情链接</h5>
+        <a href="/#top">内容首页</a>
+        <a href="/#intro">赛制说明</a>
+        <a href="/#sub">更新订阅</a>
+        <a href="/#top">站点地图</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 每日大赛推特内容专题页 · 本站内容为公开信息整理，赛事规则以主办方当日公告为准。</span>
+      <span>免责声明：页面所涉作品与数据为演示性整理，不构成任何参赛承诺。</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+  </html>
